@@ -16,4 +16,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     ui->pushButton->setText("ok");
+    func* obj = new func();
+    QString str = ui->pushButton->text();
+    str = obj->strToNwidth(6,"left",str);
+    ui->pushButton->setText(str);
 }
